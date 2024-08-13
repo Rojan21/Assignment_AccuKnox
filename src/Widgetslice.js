@@ -1,15 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+import Data from './Data.js'
 const Widgetslice = createSlice({
 
     name:'Widgetslice',
-    initialState:{
-    value: 1
-    },
+    initialState:Data,
     reducers:{
-      updatevalue : (state,action)=>{
-        console.log(action.payload)
-        state.value = state.value+action.payload;
+      updatepagination : (state,action)=>{
+        console.log(state)
+        
       }
     }
 

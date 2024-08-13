@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-.DashBoard button{
+.edit_button{
     width: 10rem;
      height: 4rem;
     background-color:   rgb(1, 86, 7);
@@ -28,32 +28,34 @@
 
 .categories_grid{
     width: 75rem;
-    height: 35rem;
+    height: auto;
     margin-top: 2rem;
     
 }
 .categories_widget{
     width: 75rem;
    
-    
+    margin-bottom: 2rem;
     display: flex;
     
-   
-    gap: 2rem;
+   justify-content: center;
+   align-items: center;
+    gap: 1rem;
     margin-top: 1rem;
     
-   overflow-x: auto;
+
     
     
     
 }
 
 .categories_widget div{
-    flex: 0 0 20rem;
+    width: 30rem;
     background-color: white;
     box-shadow: 2px 2px 10px rgb(202, 200, 200);
     height: 10rem;
     padding: 1rem;
+    /* background-color: aqua; */
 }
 
 .categories_widget > div > p {
@@ -64,4 +66,45 @@
 display: flex;
 justify-content: center;
 align-items: center;
+}
+.Categories_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    gap: 1rem;
+}
+.Categories_button button{
+    width: 2.5rem;
+    height: 2.5rem;
+   background-color:   rgb(1, 86, 7);
+   border-radius: 50%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight:700 ;
+   font-size: 1rem;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+
+.scroll{
+    width: 2rem;
+    height: 2rem;
+   background-color:   rgb(1, 86, 7);
+   border-radius: 2rem;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight:700 ;
+   font-size: 1rem;
+   color: white;
+}
+
+.title{
+color: rgb(225, 34, 34);
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.description{
+font-size: 1.2rem;
 }
