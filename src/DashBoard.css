@@ -1,0 +1,67 @@
+.DashBoard{
+    width: 80rem;
+    height: 35rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    
+}
+
+.DashBoard_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DashBoard button{
+    width: 10rem;
+     height: 4rem;
+    background-color:   rgb(1, 86, 7);
+    border-radius: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:700 ;
+    font-size: 1rem;
+    color: white;
+}
+
+.categories_grid{
+    width: 75rem;
+    height: 35rem;
+    margin-top: 2rem;
+    
+}
+.categories_widget{
+    width: 75rem;
+   
+    
+    display: flex;
+    
+   
+    gap: 2rem;
+    margin-top: 1rem;
+    
+   overflow-x: auto;
+    
+    
+    
+}
+
+.categories_widget div{
+    flex: 0 0 20rem;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgb(202, 200, 200);
+    height: 10rem;
+    padding: 1rem;
+}
+
+.categories_widget > div > p {
+    text-align: center; /* Ensure text inside the <p> is centered */
+}
+
+.Add_widget{
+display: flex;
+justify-content: center;
+align-items: center;
+}

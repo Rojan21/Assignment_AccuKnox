@@ -9,12 +9,13 @@ import Header from "./Header"
 import Test from "./Test"
 import Store from "./Store"
 import Mainnavigation from "./Mainnavigation"
+import DashBoard from "./DashBoard"
 const route = createBrowserRouter([
   {path:'/',element: <Mainnavigation/>,children:[
 
-    {path:'check',element: <p>hello</p>},
-    {path:'DashBoard',element: <p>hello</p>},
-    {path:':id',element:<p>hello</p>}
+    {index:true,element: <Home/>},
+    {path:'DashBoard',element: <DashBoard/>},
+    
 
   ]},
 
