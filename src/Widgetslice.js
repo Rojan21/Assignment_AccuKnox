@@ -18,6 +18,7 @@ const Widgetslice = createSlice({
         const index = state.categories.findIndex(element => element.Id === action.payload);
         state.categories[index].Paginaton.Start+=1;
         state.categories[index].Paginaton.End+=1;
+        console.log(state)
         
       },
       AddWidget:(state,action)=>{
@@ -28,6 +29,29 @@ const Widgetslice = createSlice({
           {
             "title": action.payload.name,
             "text": action.payload.text
+          },
+        )
+      },
+      Addcategory:(state,action)=>{
+        
+        
+        
+        state.categories.push(
+          {
+            "categoryName": action.payload.categoriename,
+            "Id":Math.random().toString(36).slice(2, 11),
+            "widgets": [
+              {
+                "title": action.payload.name,
+                "text": action.payload.text
+              },
+              
+            ],
+            "Paginaton":{
+              "Start":0,
+              "End":3
+            }
+            
           },
         )
       }

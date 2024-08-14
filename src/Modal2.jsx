@@ -2,7 +2,7 @@ import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 import './Dialog.css'
 
 import { Form } from "react-router-dom";
-import Add
+import AddNewCategory from "./AddNewCatagory"; 
 import { widgetactions } from "./Widgetslice";
 
 
@@ -28,11 +28,12 @@ const Modal2 = forwardRef((props,ref)=>{
         if (categoriename && name && text) {
             dialogref.current.close()
             const data = {
-                id,
+                categoriename,
                 name,
                 text
             }
-            dispatch(widgetactions.AddWidget(data))
+            dispatch(widgetactions.Addcategory(data))
+            
         }
         
      
@@ -41,6 +42,7 @@ const Modal2 = forwardRef((props,ref)=>{
     useImperativeHandle(ref,()=>({
       OpenModal(){
        dialogref.current.showModal()
+       
       },
       closeModal(e) {
         
@@ -52,9 +54,9 @@ const Modal2 = forwardRef((props,ref)=>{
     return(
         <dialog className="Add_widget_dialog" ref={dialogref}>
              <div className="diaglog_form">
-            <h1>Add New Widget</h1>
+            <h1>Add New category </h1>
             <form onSubmit={formHandler} ref={formref}  >
-             <AddNewWidget data={data}/>
+             <AddNewCategory/>
                 
                 <div className="diaglogconfirm">
 

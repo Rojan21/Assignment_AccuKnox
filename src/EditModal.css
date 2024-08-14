@@ -1,0 +1,86 @@
+.EditModal{
+    width: 80rem;
+    height: 30rem;
+    background-color: white;
+    margin: 5rem auto;
+    border: none;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.EditModal:focus{
+    outline: none;
+}
+
+.EditModal h1{
+    margin-top: 1rem;
+}
+
+.Edit_div_main{
+    width: 75rem;
+    margin: 0 auto;
+    background-color: red;
+    display: flex;
+    padding: 1rem;
+    height: 25rem;
+    gap: 2rem;
+}
+
+.edit_categories{
+    width: 30rem;
+    background-color: yellow;
+    overflow-y: auto;
+}
+
+.edit_categories div{
+    width: 20rem;
+    background-color: brown;
+    margin: 2rem auto;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.edit_widget{
+    width: 40rem;
+    background-color: blue;
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+
+.edit_buttons{
+    width: 40rem;
+    background-color: bisque;
+    position: relative;
+}
+
+.edit-button-confirm{
+    display: flex;
+    gap: 2rem;
+    width:10 rem;
+    position: absolute;
+    right: 0;
+}
+
+.edit-button-confirm button:first-of-type{
+   
+        color: white;
+        width: 5rem;
+        height: 2rem;
+        background-color: rgb(162, 167, 242);
+        border: none;
+        cursor: pointer;
+    
+}
+
+
+.edit-button-confirm button:last-child{
+    color: white;
+    width: 5rem;
+    height: 2rem;
+    background-color: rgb(98, 98, 101);
+    border: none;
+    cursor: pointer;
+}

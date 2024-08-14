@@ -31,7 +31,7 @@ function DashBoardItem({data}){
             {data.Paginaton.Start>0&&<button onClick={()=>LeftScroll(data.Id)} className='scroll'>&lt;</button>}
             {console.log()}
             {data.widgets.slice(data.Paginaton.Start, data.Paginaton.End).map((widgetdata) => (
-  <div key={widgetdata.title}>
+  <div key={widgetdata.title+Math.random()}>
     <p className='title'>{widgetdata.title}</p>
     <p className='description'>{widgetdata.text}</p>
   </div>
