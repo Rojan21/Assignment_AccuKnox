@@ -2,6 +2,7 @@ const Data = {
     "categories": [
       {
         "categoryName": "Utilities",
+        "Id":Math.random().toString(36).slice(2, 11),
         "widgets": [
           {
             "title": "Calculator",
@@ -14,7 +15,8 @@ const Data = {
           {
             "title": "Currency Converter",
             "text": "Converts amounts between different currencies."
-          }
+          },
+          
         ],
         "Paginaton":{
           "Start":0,
@@ -24,6 +26,7 @@ const Data = {
       },
       {
         "categoryName": "Entertainment",
+        "Id":Math.random().toString(36).slice(2, 11),
         "widgets": [
           {
             "title": "Music Player",
@@ -46,6 +49,7 @@ const Data = {
       },
       {
         "categoryName": "Productivity",
+        "Id":Math.random().toString(36).slice(2, 11),
         "widgets": [
           {
             "title": "To-Do List",
@@ -68,6 +72,7 @@ const Data = {
       },
       {
         "categoryName": "Social",
+        "Id":Math.random().toString(36).slice(2, 11),
         "widgets": [
           {
             "title": "Chat",

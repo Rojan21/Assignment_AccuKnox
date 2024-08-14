@@ -5,7 +5,7 @@ function DashBoard(){
 
 
     const Data = useSelector((state)=>state.widget.categories)
-    console.log(Data)
+    
   
 
     return(
@@ -13,7 +13,7 @@ function DashBoard(){
             <div className='DashBoard_header'>
                 
             <div>CNAPP DashBoard</div>
-            <button className='edit_button'>Edit categories</button>
+            <button className='edit_button'>Add categories</button>
             </div>
             <div className='categories_grid'>
                {Data.map((data)=><DashBoardItem data={data} key={data.categoryName}/>)}

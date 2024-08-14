@@ -24,6 +24,7 @@
     font-weight:700 ;
     font-size: 1rem;
     color: white;
+    cursor: pointer;
 }
 
 .categories_grid{
@@ -38,7 +39,7 @@
     margin-bottom: 2rem;
     display: flex;
     
-   justify-content: center;
+   
    align-items: center;
     gap: 1rem;
     margin-top: 1rem;
@@ -73,8 +74,9 @@ align-items: center;
     align-items: center;
     width: 12rem;
     gap: 1rem;
+    cursor: pointer;
 }
-.Categories_button button{
+.Add-widget-shortcut{
     width: 2.5rem;
     height: 2.5rem;
    background-color:   rgb(1, 86, 7);
@@ -86,6 +88,7 @@ align-items: center;
    display: flex;
    justify-content: center;
    align-items: center;
+   cursor: pointer;
 
 }
 
@@ -98,6 +101,7 @@ align-items: center;
    font-weight:700 ;
    font-size: 1rem;
    color: white;
+   cursor: pointer;
 }
 
 .title{
