@@ -95,9 +95,12 @@ const dispatch = useDispatch()
                         </div> 
                     
                     <div className="widget_list">
-                        {data.length===0&&<NoResults2/>}
+                        {console.log(active)}
                         
-                        {data.length>0&&data[active].widgets.map((e)=><div key={e.title+Math.random()} className=" widget_divs">
+                        {data.length===0&&<NoResults2/>}
+                        {(data.length>0&&data[active].widgets.length===0)&&<NoResults2/>}
+                        
+                        {(data.length>0&&data[active].widgets.length>0)&&data[active].widgets.map((e)=><div key={e.title+Math.random()} className=" widget_divs">
                             <div className="checkboxdiv">
                                 
                         <input type="checkbox" checked={e.checked&&data[active].checked} onChange={()=>Togglewidget(e.Id)}  />
