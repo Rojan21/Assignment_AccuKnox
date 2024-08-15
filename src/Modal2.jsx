@@ -1,16 +1,14 @@
-import { forwardRef, useImperativeHandle, useRef, useState } from "react";
+import { forwardRef, useImperativeHandle, useRef } from "react";
 import './Dialog.css'
 
-import { Form } from "react-router-dom";
 import AddNewCategory from "./AddNewCatagory"; 
 import { widgetactions } from "./Widgetslice";
 
 
-import AddNewWidget from "./AddNewWidget";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 const Modal2 = forwardRef((props,ref)=>{
-    const data = useSelector((state)=>state.widget.categories)
+    
     const dispatch = useDispatch()
     
     

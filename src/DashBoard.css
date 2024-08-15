@@ -26,6 +26,9 @@
     color: white;
     cursor: pointer;
 }
+.edit_button:disabled{
+    background-color: rgba(89, 108, 89, 0.71);
+}
 
 .categories_grid{
     width: 75rem;

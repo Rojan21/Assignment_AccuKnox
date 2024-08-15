@@ -50,24 +50,36 @@
 
 
 
-.category_list div{
+.category_div{
     width: 20rem;
-    background-color: rgb(233, 227, 227);
+    
     
     border: 2px solid black;
     margin: 1rem auto;
     height: 3rem;
     flex-shrink: 0;
     display: flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     cursor: pointer;
     border-radius: 1rem;
     font-size: 1.1rem;
     
 }
+.checkboxdiv{
+    width: 5rem;
+    
+    display: flex;
+    gap: 1rem;
 
+}
+.checkboxdiv input{
+    width: 1.5rem;
+}
 
+.active_category{
+    background-color: rgb(125, 121, 121);
+}
 
 
 .edit_widget{
@@ -84,24 +96,26 @@
     height: 18rem;
     padding: 2rem;
     overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.dustbin{
+    width: 1.5rem;
+    cursor: pointer;
+    
 }
 
-.widget_list_div{
-    margin-top: .8rem;
-    display: flex;
-    gap: 1rem;
-    
-    justify-content: space-around;
-}
-.widget_list_div div{
+.widget_divs{
     width: 15rem;
-    background-color: beige;
-    height: 3rem;
+    border: 2px solid black;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     border-radius: .2rem;
+    margin-left: 1rem;
 }
 
 .edit_buttons{

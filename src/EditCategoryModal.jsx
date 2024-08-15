@@ -1,23 +1,59 @@
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 import './EditModal.css'
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import dustbin from './dustbin.svg'
+import { widgetactions } from "./Widgetslice";
 
 const EditCategoryModal = forwardRef((props,ref)=>{
+const [active,setactive] = useState(0);
+const dispatch = useDispatch()
+
     
     const data = useSelector((state)=>state.widget.categories)
     
     
     const dialogref = useRef();
     
-    
+    function Togglecategory(id){
+        const data = {
+            id
+        }
+        dispatch(widgetactions.ToggleCategory(data))
+    }
+    function Togglewidget(id){
+        const Togglewidgetdata = {
+            categoryid:data[active].Id,
+            widgetid:id
+        }
+        dispatch(widgetactions.ToggleWidget(Togglewidgetdata))
+    }
+
+     
+    function Deletecategory(id){
+        const data = {
+            id
+        }
+        dispatch(widgetactions.DeleteCategory(data))
+        
+        
+    }
   
+    function Deletewidget(id){
+       
+        const Togglewidgetdata = {
+            categoryid:data[active].Id,
+            widgetid:id
+        }
+        dispatch(widgetactions.DeleteWidget(Togglewidgetdata))
+        
+    }
     
     useImperativeHandle(ref,()=>({
       OpenModal(){
        dialogref.current.showModal()
       },
       closeModal(e) {
+        
         
         dialogref.current.close();
     }
@@ -37,13 +73,19 @@ const EditCategoryModal = forwardRef((props,ref)=>{
                     
                     <div className="category_list">
 
-                    {data.map((item)=><div>{item.categoryName}</div>)}
+                    {data.map((item,index)=><div onClick={()=>setactive(index)} className={`category_div ${active===index?'active_category':undefined}`}key={index}>
+                        <div className="checkboxdiv">
+                        <input type="checkbox" checked={item.checked} onChange={()=>Togglecategory(item.Id)}  />
+                         <img className="dustbin" onClick={(e)=>{e.stopPropagation(); setactive(pre=>pre-1===-1?0:pre-1);Deletecategory(item.Id)} } src={dustbin} alt="" />
+                        </div>
+                         {item.categoryName}
+                         </div>)}
                     </div>
                     
 
 
                 </div>
-                <div >
+                <div>
                     <div className="edit_widget">
 
                     <div className="widget_head">
@@ -51,22 +93,32 @@ const EditCategoryModal = forwardRef((props,ref)=>{
                         </div> 
                     
                     <div className="widget_list">
-                        <div className="widget_list_div">
-                            <div>Widget1</div>
-                            <div>Widget2</div>
+                        
+                        
+                        {data[active].widgets.map((e)=><div key={e.title+Math.random()} className=" widget_divs">
+                            <div className="checkboxdiv">
+                                
+                        <input type="checkbox" checked={e.checked&&data[active].checked} onChange={()=>Togglewidget(e.Id)}  />
+                         <img className="dustbin" onClick={()=>Deletewidget(e.Id)} src={dustbin} alt="" />
                         </div>
-                        <div className="widget_list_div">
-                            <div>Widget1</div>
-                            <div>Widget2</div>
-                        </div>
-                        <div className="widget_list_div">
-                            <div>Widget1</div>
-                            <div>Widget2</div>
-                        </div>
-                        <div className="widget_list_div">
-                            <div>Widget1</div>
-                            <div>Widget2</div>
-                        </div>
+                            {e.title}
+                            </div>)}
+
+                        
+                             
+                            
+
+
+
+
+                            
+
+                           
+
+                       
+                        
+                       
+                        
 
                    
                     </div>
@@ -76,9 +128,9 @@ const EditCategoryModal = forwardRef((props,ref)=>{
                     <div className="edit_buttons">
                         <div className="edit-button-confirm">
 
-                        <button>Confirm</button>
+                        
 
-                        <button>Cancel</button>
+                        <button onClick={()=>dialogref.current.close()}>Close</button>
                         </div>
                     </div>
 

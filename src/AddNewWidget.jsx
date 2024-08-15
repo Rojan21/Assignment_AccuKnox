@@ -1,12 +1,15 @@
 
 function AddNewWidget({data}){
+
+    
     
     return(
         <>
         
         <label htmlFor="categorie">Select a category</label>
-                <select name="widgetcategory" id="">
-                    {data.map((data)=> <option key={data.Id} value={data.Id}>{data.categoryName}</option>)}
+       
+                <select name="widgetcategory"   id="">
+                    {data.map((data)=> <option key={data.Id}  value={data.Id} >{data.categoryName}</option>)}
                     
                 </select>
                 <label htmlFor="WidgetName">WidgetName</label>

@@ -1,8 +1,6 @@
 import { forwardRef, useImperativeHandle, useRef, useState } from "react";
 import './Dialog.css'
-import { redirect } from "react-router-dom";
-import { useNavigate, useNavigation } from "react-router-dom";
-import { Form } from "react-router-dom";
+
 
 import { widgetactions } from "./Widgetslice";
 
@@ -21,7 +19,7 @@ const Modal = forwardRef((props,ref)=>{
     function formHandler(e){
         e.preventDefault()
         const formData = new FormData(e.target);
-        console.log(formData)
+      
         const id = formData.get('widgetcategory')?.trim();
         const name = formData.get('widgetname')?.trim();
         const text = formData.get('widgettext')?.trim();
