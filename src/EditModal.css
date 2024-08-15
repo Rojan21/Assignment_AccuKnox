@@ -19,35 +19,89 @@
 .Edit_div_main{
     width: 75rem;
     margin: 0 auto;
-    background-color: red;
+   
     display: flex;
     padding: 1rem;
     height: 25rem;
     gap: 2rem;
+
+}
+
+.category_list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding-top: 3rem;
+    
+   
 }
 
 .edit_categories{
     width: 30rem;
-    background-color: yellow;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    
+    
+    
+}
+
+
+
+.category_list div{
+    width: 20rem;
+    background-color: rgb(233, 227, 227);
+    
+    border: 2px solid black;
+    margin: 1rem auto;
+    height: 3rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    
+}
+
+
+
+
+.edit_widget{
+    width: 40rem;
+    
+    height: 20rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.widget_list{
+    
+    height: 18rem;
+    padding: 2rem;
     overflow-y: auto;
 }
 
-.edit_categories div{
-    width: 20rem;
-    background-color: brown;
-    margin: 2rem auto;
+.widget_list_div{
+    margin-top: .8rem;
+    display: flex;
+    gap: 1rem;
+    
+    justify-content: space-around;
+}
+.widget_list_div div{
+    width: 15rem;
+    background-color: beige;
     height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-.edit_widget{
-    width: 40rem;
-    background-color: blue;
-    height: 20rem;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
+    border-radius: .2rem;
 }
 
 .edit_buttons{
