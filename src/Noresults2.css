@@ -1,0 +1,13 @@
+.Noresults2{
+    width: 20rem;
+    
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+.Noresults2 img{
+    width: 10rem;
+
+}

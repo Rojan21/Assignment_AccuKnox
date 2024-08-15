@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import Modal2 from './Modal2';
 import EditCategoryModal from './EditCategoryModal';
 import edit from './edit.svg'
+import NoResults from './NoResults';
 
 function DashBoard(){
 
@@ -16,6 +17,7 @@ function DashBoard(){
 
     const disable = Filtered_Data.length===0&&searchterm!=='';
     const disable2 = Filtered_Data.length>0;
+    
         const handleClick = () => {
             
           Modaldata.current.OpenModal()
@@ -33,9 +35,9 @@ function DashBoard(){
             <div className='DashBoard_header'>
                 
             <div>CNAPP DashBoard</div>
-            <button onClick={handleClick2} disabled={disable||disable2}  className='edit_button2'><img src={edit} alt="" />Edit</button>
+            {!(disable || disable2)&&<button onClick={handleClick2}  className='edit_button2'><img src={edit} alt="" />Edit</button>}
             <EditCategoryModal ref={EditModal}/>
-            <button onClick={handleClick} disabled={disable||disable2}  className='edit_button'>Add categories</button>
+            {!(disable || disable2)&&<button onClick={handleClick} disabled={disable||disable2}  className='edit_button'>Add categories</button>}
 
             <Modal2 ref={Modaldata}/>
             </div>
@@ -43,7 +45,8 @@ function DashBoard(){
                
                {Filtered_Data.length===0&&searchterm===''&&Data.filter(item => item.checked).map((data)=><DashBoardItem data={data} key={data.categoryName}/>)}
                {Filtered_Data.map((data)=><DashBoardItem data={data} key={data.categoryName}/>)}
-               {Filtered_Data.length===0&&searchterm!==''&&<p>Hello try agin</p>}
+               {Filtered_Data.length===0&&searchterm!==''&&<NoResults/>}
+               {Data.filter(item => item.checked).length===0&&<NoResults/>}
                
             </div>
         </div>
