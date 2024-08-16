@@ -1,8 +1,16 @@
-# React + Vite
+# Widget Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Efficiently manage your widgets with our dashboard .Categorize them, and easily search through your collection. Streamline your workspace and enhance productivity with intuitive widget management tools.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# How to Run
+
+1.Clone or Download the Repository
+
+Clone: Open your terminal or command prompt and run
+
+git clone [repository-url]
+
+
+
+
