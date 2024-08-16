@@ -9,7 +9,8 @@ Efficiently manage your widgets with our dashboard .Categorize them, and easily 
 
 Clone: Open your terminal or command prompt and run
 
-git clone [repository-url]
+  ```bash
+   git clone [repository-url]
 
 
 
