@@ -42,7 +42,7 @@ This will usually start the development server and open the application in your 
 
 Alternatively, Users can see a live version of this project without having to set it up locally by using the below link
 
-``` https://66be2a167eb1ff5be5761b38--kaleidoscopic-cat-3633a8.netlify.app/ ```
+[Live Demo](https://66be2a167eb1ff5be5761b38--kaleidoscopic-cat-3633a8.netlify.app/)
 
 
  Please view it on a desktop as it is not responsive on mobile devices.
